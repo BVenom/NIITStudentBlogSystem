@@ -1,11 +1,11 @@
 # NIITStudentBlogSystem
 <h3>5月20日项目提交后更新</h3><br/>
 环境需要eclipse EE+Tomcat服务器+mysql,下载后首先导入数据库文件blogs.sql，项目首页为index.jsp或showIndex.do，管理员账号为admin，密码admin。<br/>
-项目代码注意事项(重要，影响运行)
+<b>项目代码注意事项(重要，影响运行)</b>
 application-servlet.xml必须同时包含于文件夹/niit/WebContent/WEB-INF/classes/和/niit/WebContent/WEB-INF/中，前者可能因为编译被清除，需要手动添加<br>
-而且文件夹/niit/WebContent/WEB-INF/classes/中的application-servlet.xml文件需删去一行代码<context:component-scan base-package="com.blog.*" > </context:component-scan>，后者不能删除这行代码<br>
+而且文件夹/niit/WebContent/WEB-INF/classes/中的application-servlet.xml文件<b>必须删去</b>一行代码"<context:component-scan base-package="com.blog.*" > </context:component-scan>"，后者一定<b>不能删除</b>这行代码<br/>
 
------------------------------------------------------------------------------------------------------------------------<br>
+-----------------------------------------------------------------------------------------------------------------------------------<br>
 <h3>项目文档</h3>
 1	项目名称：<br/>
 NIIT学生个人博客系统<br/>
