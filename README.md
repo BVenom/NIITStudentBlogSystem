@@ -32,5 +32,7 @@ NIIT博客系统为学员打造一个笔记分享、学习心得、教学协作�
 2)	系统无明显的安全漏洞，包括SQL注入和XSS跨站脚本注入
 3)	系统应该兼容响应式布局
 4)	系统应该具有较好的可扩展性和可维护性
-5.项目代码注意事项
-/niit/WebContent/WEB-INF/application-servlet.xml必须同时包含于文件夹/niit/WebContent/WEB-INF/classes/中，而且文件夹/niit/WebContent/WEB-INF/classes/中的application-servlet.xml文件需删去一行代码<context:component-scan base-package="com.blog.*" > </context:component-scan>
+
+
+5.项目代码注意事项(重要，影响运行)
+application-servlet.xml必须同时包含于文件夹/niit/WebContent/WEB-INF/classes/和/niit/WebContent/WEB-INF/中，前者可能因为编译被清除，需要手动添加，而且文件夹/niit/WebContent/WEB-INF/classes/中的application-servlet.xml文件需删去一行代码<context:component-scan base-package="com.blog.*" > </context:component-scan>，后者不能删除这行
