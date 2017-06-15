@@ -47,6 +47,4 @@ public class EditLog extends HttpServlet {
 			mav.addObject("log",logpo);
 			return mav;
 	}
-	 
-
 }

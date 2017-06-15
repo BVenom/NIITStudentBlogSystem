@@ -1,4 +1,4 @@
-package com.blog.FILTER;
+package com.blog.Filter;
 
 import java.io.IOException;
 
@@ -34,7 +34,7 @@ public class UserFilter extends HttpServlet implements Filter {
            if( user==null  && url.indexOf("addArticle")>-1 ) {
         	   response.sendRedirect(request.getContextPath() + "/login.jsp");
                return;
-           }else if(user!="admin"  && url.indexOf("manageUsr.do")>-1)
+           }else if(user!="admin" && (url.indexOf("manageUsr.do")>-1))
            {
         	   response.sendRedirect(request.getContextPath() + "/showIndex.do");
         	   return;

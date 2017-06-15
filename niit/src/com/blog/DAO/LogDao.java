@@ -154,7 +154,9 @@ public class LogDao {
 		while( iterator.hasNext() ) {
 			Map<String, Object> map = (Map<String, Object>) iterator.next();
 			logPo.setID( (int)map.get("logID"));
-			logPo.setContent( (String)map.get("logDetail") );
+			String logdetail=(String)map.get("logDetail");
+			logdetail.replace('\"','\'');
+			logPo.setContent( logdetail);
 			logPo.setDate( (String)(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format((Date)map.get("logTime")));
 			logPo.setTitle( (String)map.get("logTitle") );
 			logPo.setType( (String)map.get("logType") );

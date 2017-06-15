@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
+import java.sql.SQLException;
 import org.springframework.stereotype.Repository;
 
 import com.blog.PO.LogPo;
@@ -22,7 +22,12 @@ public class UserDao {
 		public ReplyDao ReplyDao=new ReplyDao();
 		public RemarkDao remarkDao=new RemarkDao();
 		*/
-		
+		public int inquiry(String inquiry) {
+			try{
+				jdbcDao.jdbcTemplate.execute(inquiry);
+			}catch(Exception e){return 0;}
+			return 1;
+		}
 		
 		public boolean addUser(String username, String password,String email) {
 		if(true==ifUserExist(username)){

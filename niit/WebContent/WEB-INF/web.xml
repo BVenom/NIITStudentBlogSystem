@@ -34,7 +34,7 @@
   
   	<filter>  
         <filter-name>SecurityServlet</filter-name>  
-        <filter-class>com.blog.FILTER.UserFilter</filter-class>  
+        <filter-class>com.blog.Filter.UserFilter</filter-class>  
     </filter>  
     <filter-mapping>  
         <filter-name>SecurityServlet</filter-name>  
@@ -61,7 +61,12 @@
     <servlet-class>com.blog.SERVICE.Register</servlet-class>
   </servlet>
   
-    <servlet>
+  <servlet>
+    <servlet-name>SQLInquiry</servlet-name>
+    <servlet-class>com.blog.SERVICE.SQLInquiry</servlet-class>
+  </servlet>
+  
+  <servlet>
     <servlet-name>Fornum</servlet-name>
     <servlet-class>com.blog.SERVICE.Fornum</servlet-class>
   </servlet>
@@ -137,6 +142,11 @@
  <servlet-mapping>
         <servlet-name>Register</servlet-name>
         <url-pattern>/servlet/Register</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+        <servlet-name>SQLInquiry</servlet-name>
+        <url-pattern>/servlet/SQLInquiry</url-pattern>
   </servlet-mapping>
   
   <servlet-mapping>

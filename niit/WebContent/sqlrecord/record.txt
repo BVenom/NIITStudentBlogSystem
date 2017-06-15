@@ -1,0 +1,28 @@
+Operation:INSERT INTO USER(username,PASSWORD,email,blogclicknum) VALUES ('username1','password','email',0)
+Operation Time:2017-06-03 10:59:33
+Operation Result:Failure
+------------------------------------------------------------------------------------------------
+Operation:INSERT INTO USER(usernam1e,PASSWORD,email,blogclicknum) VALUES ('username1','password','email',0)
+Operation Time:2017-06-03 10:59:46
+Operation Result:Failure
+------------------------------------------------------------------------------------------------
+Operation:INSERT INTO USER(username3,PASSWORD,email,blogclicknum) VALUES ('username1','password','email',0)
+Operation Time:2017-06-03 11:00:06
+Operation Result:Failure
+------------------------------------------------------------------------------------------------
+Operation:select * from user
+Operation Time:2017-06-03 11:02:24
+Operation Result:success
+------------------------------------------------------------------------------------------------
+Operation:INSERT INTO USER(username3,PASSWORD,email) VALUES ('username1','password','email')
+Operation Time:2017-06-03 11:02:51
+Operation Result:Failure
+------------------------------------------------------------------------------------------------
+Operation:INSERT INTO USER(username,PASSWORD,email) VALUES ('username3','password','email')
+Operation Time:2017-06-03 11:03:11
+Operation Result:success
+------------------------------------------------------------------------------------------------
+Operation:INSERT INTO USER(username,PASSWORD,email,blogclicknum) VALUES ('username2','password','email',0)
+Operation Time:2017-06-03 11:10:50
+Operation Result:success
+------------------------------------------------------------------------------------------------

@@ -98,12 +98,13 @@
              </form>
              <script>
              $(document).ready(function(){
+            	 
             	var editID="${sessionScope.editlogID}";
             	if(editID!=null)
 		    	{
             	var ue = UE.getEditor('c');
 		    	var title="${log.title}";
-		    	var content="${log.content}";
+		    	var content='${log.content}';
 		    	var type="${log.type}";
 		    	jQuery("#title").val(title);
 		   		jQuery("#type").val(type);
@@ -126,9 +127,26 @@
      		</script>
      		<script>
             jQuery(function(){
-		    	window.ue = UE.getEditor('c');
+		    	var ue = UE.getEditor('c');
+		    	/* ue.ready(function () {
+		    	    // 监听插入图片
+		    	    ue.addListener("beforeInsertImage", _beforeInsertImage);
+		    	    // 监听插入附件
+		    	    ue.addListener("afterUpfile",_afterUpfile);
+		    	});
+		    	document.getElementById('j_upload_img_btn').onclick = function () {
+		    	    var dialog = ue.getDialog("insertimage");
+		    	    dialog.title = '多图上传';
+		    	    dialog.render();
+		    	    dialog.open();
+		    	};
+		    	document.getElementById('j_upload_file_btn').onclick = function () {
+		    	    var dialog = ue.getDialog("attachment");
+		    	    dialog.title = '附件上传';
+		    	    dialog.render();
+		    	    dialog.open();
+		    	}; */
 		    });
-
             </script>
           </div>
         </div>

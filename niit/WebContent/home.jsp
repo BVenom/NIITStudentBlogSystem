@@ -99,7 +99,8 @@
 		</c:if>
 		<c:if test="${user=='admin'&&param.Name=='admin'}">
 		<li><a href="/niit/listArticle.do?q=q&Name=${user}">管理博文</a></li>  
-		<li><a href="manageUser.do">管理用户</a></li>  
+		<li><a href="manageUser.do">管理用户</a></li>
+		<li><a href="SQLrequest.jsp">数据库操作</a></li>   
 		</c:if>
 		<c:if test="${user=='admin'&&param.Name!='admin'}">
 		<li><a href="/niit/listArticle.do?q=q&Name=${user}">返回管理员首页</a></li> 
